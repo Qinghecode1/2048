@@ -1,3 +1,19 @@
+import java.awt.Font;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.util.Arrays;
+import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
+import java.awt.image.BufferedImage;
+
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
 // 按两次 Shift 打开“随处搜索”对话框并输入 `show whitespaces`，
 // 然后按 Enter 键。现在，您可以在代码中看到空格字符。
 public class Main {

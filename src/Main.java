@@ -1,33 +1,18 @@
-import java.awt.Font;
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.util.Arrays;
-import java.util.Random;
-import java.util.Timer;
-import java.util.TimerTask;
-import java.awt.image.BufferedImage;
+import javax.swing.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        JFrame frame = new JFrame("2048 Game");//名字
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//设置窗口框架的默认关闭操作，关了就是结束
 
-import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+        Game2048View gameView = new Game2048View(frame);
 
-// 按两次 Shift 打开“随处搜索”对话框并输入 `show whitespaces`，
-// 然后按 Enter 键。现在，您可以在代码中看到空格字符。
-public class Main {
-    public static void main(String[] args) {
-        // 当文本光标位于高亮显示的文本处时按 Alt+Enter，
-        // 可查看 IntelliJ IDEA 对于如何修正该问题的建议。
-        System.out.printf("Hello and welcome!");
+        frame.setSize(400, 400);//大小
+        frame.setLocationRelativeTo(null);//将窗口框架的位置设置为相对屏幕中心，以便最大化显示窗口。
+        frame.setVisible(true);//窗口可视化
 
-        // 按 Shift+F10 或点击装订区域中的绿色箭头按钮以运行脚本。
-        for (int i = 1; i <= 5; i++) {
-
-            // 按 Shift+F9 开始调试代码。我们已为您设置了一个断点，
-            // 但您始终可以通过按 Ctrl+F8 添加更多断点。
-            System.out.println("i = " + i);
-        }
+        // 请求焦点以确保键盘事件能够被捕获
+        frame.requestFocus();
     }
 }

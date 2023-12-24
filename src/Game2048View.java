@@ -113,7 +113,6 @@ public class Game2048View implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        // TODO 自动生成的方法存根
         newGame();
     }
 
